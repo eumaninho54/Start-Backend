@@ -22,14 +22,14 @@ export const getArgs = async (): Promise<IGetArgs> => {
 
   if (!args.name) {
     args.name = await(new Promise<string>((resolve) => {
-      rl.question("Project name: ", (answer) => {
+      const defaultProjectName = path.basename(path.resolve('.'))
+        .replace(/[^A-Za-z0-9.-]+/g, '-')
+        .replace(/^[-_.]+|-+$/g, '')
+        .toLowerCase()
+
+      rl.question(`Project name (${defaultProjectName}): `, (answer) => {
         if (answer === "") {
-          resolve(
-            path.basename(path.resolve('.'))
-              .replace(/[^A-Za-z0-9.-]+/g, '-')
-              .replace(/^[-_.]+|-+$/g, '')
-              .toLowerCase()
-          )
+          resolve(defaultProjectName)
         } 
         else {
           resolve(answer);
