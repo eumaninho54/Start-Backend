@@ -11,7 +11,10 @@ async function main() {
   const args = await getArgs();
   const pathName = getPathName({ isDev: args.isDev });
 
-  createPackageJson();
+  createPackageJson({ 
+    projectName: args.projectName,
+    pathName: pathName
+  });
 }
 
 
