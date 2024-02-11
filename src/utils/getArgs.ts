@@ -24,7 +24,12 @@ export const getArgs = async (): Promise<IGetArgs> => {
     args.name = await(new Promise<string>((resolve) => {
       rl.question("Project name: ", (answer) => {
         if (answer === "") {
-          resolve(path.basename(__dirname))
+          resolve(
+            path.basename(path.resolve('.'))
+              .replace(/[^A-Za-z0-9.-]+/g, '-')
+              .replace(/^[-_.]+|-+$/g, '')
+              .toLowerCase()
+          )
         } 
         else {
           resolve(answer);
