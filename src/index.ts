@@ -1,7 +1,5 @@
-import fs from "fs";
 import path from "path";
-import readline from "readline";
-import { getArgs, createPackageJson } from "./utils";
+import { getArgs, createPackageJson, getPathName } from "./utils";
 
 main();
 
@@ -11,8 +9,9 @@ async function main() {
   console.log("Support us - https://github.com/eumaninho54/init-express. \n\n")
   
   const args = await getArgs();
+  const pathName = getPathName({ isDev: args.isDev });
 
-  //createPackageJson();
+  createPackageJson();
 }
 
 

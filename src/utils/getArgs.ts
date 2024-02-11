@@ -4,7 +4,7 @@ import path from "path";
 
 type IGetArgs = {
   projectName: string;
-  pathName: string;
+  isDev: boolean;
 };
 
 export const getArgs = async (): Promise<IGetArgs> => {
@@ -34,12 +34,8 @@ export const getArgs = async (): Promise<IGetArgs> => {
     }));
   }
 
-  const pathName = args.dev
-    ? `${path.dirname(__dirname)}/example`
-    : path.dirname(__dirname)
-
   return {
     projectName: args.name,
-    pathName: pathName
+    isDev: args.dev
   }
 };
