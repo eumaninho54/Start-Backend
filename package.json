@@ -39,7 +39,8 @@
     "example": "ts-node src/index.ts -D"
   },
   "dependencies": {
-    "minimist": "^1.2.8"
+    "minimist": "^1.2.8",
+    "ora": "^8.0.1"
   },
   "commitlint": {
     "extends": [

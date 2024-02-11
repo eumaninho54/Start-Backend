@@ -1,3 +1,6 @@
 export * from "./getPathName";
 export * from "./getArgs";
-export * from "./createPackageJson";export * from "./createSourceFiles";
+export * from "./resolvePackages";
+export * from "./createPackageJson";
+export * from "./createRootFiles";
+export * from "./createSourceFiles";

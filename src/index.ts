@@ -1,22 +1,52 @@
-import path from "path";
-import { getArgs, createPackageJson, getPathName } from "./utils";
+import {
+  getArgs,
+  createPackageJson,
+  getPathName,
+  createRootFiles,
+  createSourceFiles,
+  resolvePackages,
+} from "./utils";
+import ora from "ora";
 
 main();
 
 async function main() {
-  console.log("This script will create a pre-defined node project 🚀.\n")
-  
-  console.log("Support us - https://github.com/eumaninho54/init-express. \n\n")
-  
+  console.log("This script will create a pre-defined node project 🚀.\n");
+
+  console.log("Support us - https://github.com/eumaninho54/init-express. \n\n");
+
   const args = await getArgs();
   const pathName = getPathName({ isDev: args.isDev });
 
-  createPackageJson({ 
+  const resolvingPackages = ora({
+    prefixText: '[1] - Resolving packages 📦...'
+  }).start();
+
+  await resolvePackages({ 
+    pathName: pathName,
+    oraRef: resolvingPackages
+  });
+
+  const creatingFiles = ora({
+    prefixText: '[2] - Creating base file structure 📂...'
+  }).start();
+
+  createPackageJson({
+    projectName: args.projectName,
+    pathName: pathName,
+  });
+
+  createRootFiles({
     projectName: args.projectName,
     pathName: pathName
   });
-}
 
+  createSourceFiles({
+    projectName: args.projectName,
+    pathName: pathName,
+    oraRef: creatingFiles
+  });
+}
 
 /*const rl = readline.createInterface({
   input: process.stdin,
