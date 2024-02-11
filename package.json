@@ -1,0 +1,32 @@
+{
+  "name": "init-express",
+  "description": "Pre-generator of an express project",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eumaninho54/init-express.git"
+  },
+  "author": "eumaninho54 <angelo.omarzinho@outlook.com>",
+  "license": "MIT",
+  "bin": {
+    "init-express": "src/index.ts"
+  },
+  "bugs": {
+    "url": "https://github.com/eumaninho54/init-express/issues"
+  },
+  "homepage": "https://github.com/eumaninho54/init-express#readme",
+  "devDependencies": {
+    "@types/minimist": "^1.2.5",
+    "@types/node": "^20.11.17",
+    "ts-node": "^10.9.2",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3"
+  },
+  "scripts": {
+    "example": "ts-node src/index.ts -D"
+  },
+  "dependencies": {
+    "minimist": "^1.2.8"
+  }
+}
