@@ -55,7 +55,7 @@ const getArgs = () => __awaiter(void 0, void 0, void 0, function* () {
     });
     yield topLevelArgument(args);
     console.log("This script will create a pre-defined backend node project 🚀.");
-    console.log("Support us - https://github.com/eumaninho54/init-backend. \n");
+    console.log("Support us - https://github.com/eumaninho54/Start-Backend. \n");
     if (!args.name) {
         args.name = yield new Promise((resolve) => {
             const defaultProjectName = path_1.default
@@ -88,13 +88,13 @@ const topLevelArgument = (args) => __awaiter(void 0, void 0, void 0, function* (
     }
     if (args.help) {
         console.log("");
-        console.log("  Usage: init-backend [options]");
+        console.log("  Usage: start-backend [options]");
         console.log("");
         console.log("  Options:");
         console.log("");
         console.log("    -n, --name <string>  Name of the project. If not specified, the current.");
         console.log("                         directory name is used.");
-        console.log("    -v, --version        Output the version number of the init-backend tool.");
+        console.log("    -v, --version        Output the version number of the start-backend tool.");
         console.log("    -D, --dev            Run in development mode. Generates in example folder.");
         console.log("    -h, --help           Output usage information. This help text shows you.");
         console.log("");
