@@ -54,7 +54,7 @@ export const getArgs = async (): Promise<IGetArgs> => {
 };
 
 const topLevelArgument = async (args: Record<string, string>) => {
-  const packageJson = await import(`${__dirname}/../../../package.json`);
+  const packageJson = await import(path.join(__dirname, `../../package.json`));
 
   if (args.version) {
     console.log(`Your version: ${packageJson.version}`);
