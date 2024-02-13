@@ -32,6 +32,7 @@
     "eslint": "^8.56.0",
     "husky": "^9.0.10",
     "lefthook": "^1.6.1",
+    "ncp": "^2.0.0",
     "release-it": "^17.0.3",
     "ts-node": "^10.9.2",
     "tslib": "^2.6.2",
@@ -39,7 +40,9 @@
   },
   "scripts": {
     "example": "ts-node src/index.ts -D",
-    "build": "tsc -p tsconfig.build.json"
+    "build": "tsc -p tsconfig.build.json && npm run copy-folders && npm run copy-files",
+    "copy-folders": "ncp src/templates dist/src/templates && ncp src/workers dist/src/workers",
+    "copy-files": "ncp package.json dist/package.json && ncp LICENSE dist/LICENSE && ncp README.md dist/README.md"
   },
   "dependencies": {
     "inquirer": "^8.0.0",

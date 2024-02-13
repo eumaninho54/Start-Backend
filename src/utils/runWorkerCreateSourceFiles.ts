@@ -1,6 +1,6 @@
+import path from "path";
 import { Worker } from "worker_threads";
 import { IChoiceFramework } from "./choiceFramework";
-import { Ora } from "ora";
 
 type IProps = {
   pathName: string;
@@ -11,7 +11,7 @@ export const runWorkerCreateSourceFiles = async (props: IProps): Promise<void> =
   const { pathName, framework } = props
 
   return await new Promise((resolve) => {
-    const worker = new Worker('./src/workers/createSourceFiles.js');
+    const worker = new Worker(`${path.join(__dirname, '..')}/workers/createSourceFiles.js`)
 
     worker.postMessage({
       pathName: pathName,

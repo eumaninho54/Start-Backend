@@ -11,8 +11,7 @@ parentPort?.on('message', async (props) => {
 const createSourceFiles = async (props) => {
   const { pathName, framework } = props;
 
-  const rootPath = path.resolve('.');
-  const templateDir = path.join(rootPath, `src/templates/${framework}`);
+  const templateDir = path.join(__dirname, `../templates/${framework}`);
 
   copyDirectory(templateDir, pathName);
 

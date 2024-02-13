@@ -15,7 +15,6 @@ export const resolvePackages = async (props: IProps) => {
     exec("npm install", (err, stdout, stderr) => {
       if (err) {
         console.error(`Error when resolve packages: ${err}`);
-        return;
       }
 
       process.chdir(rootPath);
