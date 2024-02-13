@@ -1,15 +1,15 @@
 import { exec } from "child_process";
-import ora from "ora";
+import path from "path";
 
 type IProps = {
   pathName: string;
-  oraRef: ora.Ora;
 };
 
 export const resolvePackages = async (props: IProps) => {
-  const { pathName, oraRef } = props;
+  const { pathName } = props;
 
   return await new Promise((resolve) => {
+    const rootPath = path.resolve('.');
     process.chdir(pathName);
 
     exec("npm install", (err, stdout, stderr) => {
@@ -18,7 +18,7 @@ export const resolvePackages = async (props: IProps) => {
         return;
       }
 
-      oraRef.succeed();
+      process.chdir(rootPath);
       resolve(1);
     });
   });
