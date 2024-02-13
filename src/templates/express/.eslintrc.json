@@ -10,7 +10,8 @@
     "sourceType": "module"
   },
   "plugins": [
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "eslint-plugin-import-helpers"
   ],
   "rules": {
     "no-console": "warn",
@@ -33,11 +34,12 @@
         "newlinesBetween": "always",
         "groups": [
           "module",
-          "/^@core/",
+          "/^@config/",
           "/^@application/",
+          "/^@core/",
           "/^@domain/",
           "/^@infra/",
-          "/^@test/",
+          "/^@routes/",
           ["parent", "sibling"],
           "index"
         ],

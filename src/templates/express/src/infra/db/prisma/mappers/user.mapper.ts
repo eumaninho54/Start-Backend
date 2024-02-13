@@ -8,7 +8,7 @@ export class UserMapper {
       name: raw.name,
       password: raw.password,
       userKey: raw.user_key,
-      updatedAt: raw.update_at,
+      updatedAt: raw.updated_at,
       createdAt: raw.created_at,
     });
 
@@ -22,7 +22,7 @@ export class UserMapper {
       name: user.name,
       password: user.password,
       user_key: user.userKey,
-      update_at: user.updateAt,
+      updated_at: user.updateAt,
       created_at: user.createdAt,
     };
   }

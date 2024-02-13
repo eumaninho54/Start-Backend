@@ -31,7 +31,7 @@ export class PrismaUsersRepository implements UsersRepository {
 
   async findByUserKey(userKey: string): AsyncMaybe<User> {
     const user = await prisma.user.findUnique({
-      where: { userKey },
+      where: { user_key: userKey },
     });
 
     if (!user) {

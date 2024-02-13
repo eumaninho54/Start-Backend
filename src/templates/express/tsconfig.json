@@ -17,8 +17,8 @@
     "incremental": true,
     "esModuleInterop": true,
     "paths": {
-      "@config/*": ["src/config/*"],
-      "@application/*": ["src/application/*"],
+      "@config/*": ["./src/config/*"],
+      "@application/*": ["./src/application/*"],
       "@core/*": ["./src/core/*"],
       "@domain/*": ["./src/domain/*"],
       "@infra/*": ["./src/infra/*"],

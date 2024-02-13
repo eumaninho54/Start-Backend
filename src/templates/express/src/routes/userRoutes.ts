@@ -11,7 +11,7 @@ userRoutes.get(
   (res, req) => getUserByUserKeyController.handle(res, req)
 )
 
-userRoutes.get(
+userRoutes.post(
   '/login',
   (res, req) => getUserByCredentialsController.handle(res, req)
 );
