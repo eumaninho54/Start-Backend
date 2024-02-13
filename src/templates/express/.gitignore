@@ -1,0 +1,14 @@
+# node
+node_modules/
+
+# Local
+.vscode/
+.idea/
+tmp/
+temp/
+
+# Environment
+.env
+.env.testing
+dist
+build

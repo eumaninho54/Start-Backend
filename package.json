@@ -1,0 +1,74 @@
+{
+  "name": "init-backend",
+  "description": "Pre-generator of an express project",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "author": "eumaninho54 <angelo.omarzinho@outlook.com> (https://github.com/eumaninho54)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eumaninho54/init-backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eumaninho54/init-backend/issues"
+  },
+  "keywords": [
+    "node",
+    "express"
+  ],
+  "bin": {
+    "init-backend": "src/index.ts"
+  },
+  "homepage": "https://github.com/eumaninho54/init-backend#readme",
+  "devDependencies": {
+    "@commitlint/config-conventional": "^18.6.0",
+    "@release-it/conventional-changelog": "^8.0.1",
+    "@types/inquirer": "^9.0.7",
+    "@types/minimist": "^1.2.5",
+    "@types/node": "^20.11.17",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "commitlint": "^18.6.0",
+    "eslint": "^8.56.0",
+    "husky": "^9.0.10",
+    "lefthook": "^1.6.1",
+    "ncp": "^2.0.0",
+    "release-it": "^17.0.3",
+    "ts-node": "^10.9.2",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3"
+  },
+  "scripts": {
+    "example": "ts-node src/index.ts -D",
+    "build": "tsc -p tsconfig.build.json && npm run copy-folders && npm run copy-files",
+    "copy-folders": "ncp src/templates dist/src/templates && ncp src/workers dist/src/workers",
+    "copy-files": "ncp package.json dist/package.json && ncp LICENSE dist/LICENSE && ncp README.md dist/README.md"
+  },
+  "dependencies": {
+    "inquirer": "^8.0.0",
+    "minimist": "^1.2.8",
+    "ora": "^5.4.1"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore: release ${version}",
+      "tagName": "v${version}"
+    },
+    "npm": {
+      "publish": true
+    },
+    "github": {
+      "release": true
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": "angular"
+      }
+    }
+  }
+}
