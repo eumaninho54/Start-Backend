@@ -11,9 +11,6 @@ import ora from "ora";
 main();
 
 async function main() {
-  console.log("This script will create a pre-defined backend node project 🚀.");
-  console.log("Support us - https://github.com/eumaninho54/init-backend. \n");
-
   const args = await getArgs();
   const pathName = getPathName({ isDev: args.isDev });
 
@@ -53,5 +50,5 @@ async function main() {
 
   resolvingPackages.succeed();
 
-  process.exit(1);
+  process.exit(0);
 }
