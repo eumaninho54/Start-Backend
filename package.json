@@ -43,7 +43,7 @@
     "build": "tsc -p tsconfig.build.json && npm run copy-folders && npm run copy-files",
     "copy-folders": "ncp templates dist/templates && ncp workers dist/workers",
     "copy-files": "ncp package.json dist/package.json && ncp LICENSE dist/LICENSE && ncp README.md dist/README.md && ncp .npmignore dist/.npmignore && ncp .gitignore dist/.gitignore",
-    "publish": "npm publish"
+    "release": "release-it"
   },
   "dependencies": {
     "inquirer": "^8.0.0",
