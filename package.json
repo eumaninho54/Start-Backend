@@ -1,25 +1,25 @@
 {
-  "name": "init-backend",
+  "name": "start-backend",
   "description": "Pre-generator of a backend project",
   "version": "1.0.0",
-  "main": "./bin/init-backend.ts",
+  "main": "./bin/start-backend.ts",
   "license": "MIT",
   "author": "eumaninho54 <angelo.omarzinho@outlook.com> (https://github.com/eumaninho54)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eumaninho54/init-backend.git"
+    "url": "git+https://github.com/eumaninho54/Start-Backend.git"
   },
   "bugs": {
-    "url": "https://github.com/eumaninho54/init-backend/issues"
+    "url": "https://github.com/eumaninho54/Start-Backend/issues"
   },
   "keywords": [
     "node",
     "express"
   ],
   "bin": {
-    "init-backend": "./bin/init-backend.js"
+    "start-backend": "./bin/start-backend.js"
   },
-  "homepage": "https://github.com/eumaninho54/init-backend#readme",
+  "homepage": "https://github.com/eumaninho54/Start-Backend#readme",
   "devDependencies": {
     "@commitlint/config-conventional": "^18.6.0",
     "@release-it/conventional-changelog": "^8.0.1",
@@ -39,7 +39,7 @@
     "typescript": "^5.3.3"
   },
   "scripts": {
-    "example": "ts-node ./bin/init-backend -D",
+    "example": "ts-node ./bin/start-backend -D",
     "build": "tsc -p tsconfig.build.json && npm run copy-folders && npm run copy-files",
     "copy-folders": "ncp templates dist/templates && ncp workers dist/workers",
     "copy-files": "ncp package.json dist/package.json && ncp LICENSE dist/LICENSE && ncp README.md dist/README.md && ncp .npmignore dist/.npmignore && ncp .gitignore dist/.gitignore",
