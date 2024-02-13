@@ -2,7 +2,7 @@
   "name": "init-backend",
   "description": "Pre-generator of an express project",
   "version": "1.0.0",
-  "main": "src/index.ts",
+  "main": "src/bin/init-backend.ts",
   "license": "MIT",
   "author": "eumaninho54 <angelo.omarzinho@outlook.com> (https://github.com/eumaninho54)",
   "repository": {
@@ -17,7 +17,7 @@
     "express"
   ],
   "bin": {
-    "init-backend": "src/index.ts"
+    "init-backend": "bin/init-express.js"
   },
   "homepage": "https://github.com/eumaninho54/init-backend#readme",
   "devDependencies": {
@@ -39,9 +39,9 @@
     "typescript": "^5.3.3"
   },
   "scripts": {
-    "example": "ts-node src/index.ts -D",
+    "example": "ts-node src/bin/init-backend -D",
     "build": "tsc -p tsconfig.build.json && npm run copy-folders && npm run copy-files",
-    "copy-folders": "ncp src/templates dist/src/templates && ncp src/workers dist/src/workers",
+    "copy-folders": "ncp src/templates dist/templates && ncp src/workers dist/workers",
     "copy-files": "ncp package.json dist/package.json && ncp LICENSE dist/LICENSE && ncp README.md dist/README.md && ncp .npmignore dist/.npmignore && ncp .gitignore dist/.gitignore"
   },
   "dependencies": {

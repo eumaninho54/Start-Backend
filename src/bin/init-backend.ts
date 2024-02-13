@@ -5,7 +5,7 @@ import {
   runWorkerCreateSourceFiles,
   resolvePackages,
   changeDynamicName,
-} from "./utils";
+} from "../utils";
 import ora from "ora";
 
 main();
