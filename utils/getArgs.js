@@ -81,7 +81,7 @@ const getArgs = () => __awaiter(void 0, void 0, void 0, function* () {
 });
 exports.getArgs = getArgs;
 const topLevelArgument = (args) => __awaiter(void 0, void 0, void 0, function* () {
-    const packageJson = yield Promise.resolve(`${path_1.default.join(__dirname, `../../package.json`)}`).then(s => __importStar(require(s)));
+    const packageJson = yield Promise.resolve(`${path_1.default.join(__dirname, `../package.json`)}`).then(s => __importStar(require(s)));
     if (args.version) {
         console.log(`Your version: ${packageJson.version}`);
         process.exit(0);
