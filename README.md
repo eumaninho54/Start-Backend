@@ -52,7 +52,7 @@ This generator can also be further configured with the following command line fl
 ## 🤝 Contributing
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
 
-Check out our contribution guidelines for more information on how to report issues, submit pull requests, and more.
+We're always looking for new and innovative templates to expand the capabilities and flexibility of init-backend. If you've crafted a template that you believe would benefit the community or have an idea for one that could address a specific need or gap, we welcome your contributions!
 
 ## 📜 License
 Distributed under the MIT License. See [MIT](LICENSE) for more information.
