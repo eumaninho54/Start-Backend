@@ -5,6 +5,7 @@ import express, { NextFunction, Request, Response } from 'express';
 
 import { routes } from '@routes/index';
 import { DomainError } from '@core/domain/errors/domain-error';
+import { PORT } from "@config/app"
 
 const app = express();
 
@@ -27,4 +28,4 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   next();
 });
 
-app.listen(3333, () => console.log("Running"));
+app.listen(PORT, () => console.log("Running"));
