@@ -2,8 +2,18 @@
   <img style="height: 80px" src="https://github.com/eumaninho54/Start-Backend/assets/87163356/687c5925-dce9-4198-a983-43056c901da3">
 
   # Start-Backend: Streamline Your Backend Projet Setup
+  <p align="center">
+    <a href="https://github.com/eumaninho54/start-backend/blob/HEAD/LICENSE">
+      <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Start-Backend is released under the MIT license." />
+    </a>
+    <a href="https://www.npmjs.com/package/start-backend">
+      <img 
+        src="https://img.shields.io/npm/v/start-backend?color=brightgreen&label=npm%20package"
+        alt="Current npm package version."
+      />
+    </a>
+  </p>
 </div>
-
 Start-Backend is a tool designed to streamline the development of backend projects by offering a variety of pre-configured templates. With Start-Backend, you can quickly kickstart a new project by choosing from different frameworks, architectures, and tools that best suit your needs.
 
 ## 🚀 Features
