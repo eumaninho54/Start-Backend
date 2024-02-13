@@ -1,6 +1,6 @@
 {
   "name": "init-backend",
-  "description": "Pre-generator of an express project",
+  "description": "Pre-generator of a backend project",
   "version": "1.0.0",
   "main": "./bin/init-backend.ts",
   "license": "MIT",
