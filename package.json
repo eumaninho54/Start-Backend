@@ -1,5 +1,5 @@
 {
-  "name": "init-express",
+  "name": "init-backend",
   "description": "Pre-generator of an express project",
   "version": "1.0.0",
   "main": "src/index.ts",
@@ -7,19 +7,19 @@
   "author": "eumaninho54 <angelo.omarzinho@outlook.com> (https://github.com/eumaninho54)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eumaninho54/init-express.git"
+    "url": "git+https://github.com/eumaninho54/init-backend.git"
   },
   "bugs": {
-    "url": "https://github.com/eumaninho54/init-express/issues"
+    "url": "https://github.com/eumaninho54/init-backend/issues"
   },
   "keywords": [
     "node",
     "express"
   ],
   "bin": {
-    "init-express": "src/index.ts"
+    "init-backend": "src/index.ts"
   },
-  "homepage": "https://github.com/eumaninho54/init-express#readme",
+  "homepage": "https://github.com/eumaninho54/init-backend#readme",
   "devDependencies": {
     "@commitlint/config-conventional": "^18.6.0",
     "@release-it/conventional-changelog": "^8.0.1",
