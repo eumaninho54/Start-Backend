@@ -1,12 +1,13 @@
+import { UserByEmailNotFoundError } from '@application/use-cases/user/errors/user-by-email-not-found.error';
+
 import { Either, left, right } from '@core/helpers/Either';
 
 import { User } from '@domain/entities/user.entity';
 import { Email } from '@domain/value-objects/email/email.value-object';
-import { Password } from '@domain/value-objects/password/password.value-object';
 import { EmailBadFormattedError } from '@domain/value-objects/email/errors/email-bad-formatted-error';
 import { PasswordHashingError } from '@domain/value-objects/password/errors/password-hashing-error';
+import { Password } from '@domain/value-objects/password/password.value-object';
 
-import { UserByEmailNotFoundError } from '@application/use-cases/user/errors/user-by-email-not-found.error';
 
 import { UsersRepository } from '@infra/db/repositories/users.repository';
 
