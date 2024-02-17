@@ -1,7 +1,7 @@
 <div align="center">
   <img style="height: 80px" src="https://github.com/eumaninho54/Start-Backend/assets/87163356/687c5925-dce9-4198-a983-43056c901da3">
 
-  # Start-Backend: Streamline Your Backend Projet Setup
+  # Start-Backend: Streamline Your Backend Project Setup
   <p align="center">
     <a href="https://github.com/eumaninho54/start-backend/blob/HEAD/LICENSE">
       <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Start-Backend is released under the MIT license." />
