@@ -1,8 +1,10 @@
 import { AsyncMaybe } from '@core/helpers/Maybe';
+
 import { User } from '@domain/entities/user.entity';
-import { UsersRepository } from '@infra/db/repositories/users.repository';
+
 import { UserMapper } from '@infra/db/prisma/mappers/user.mapper';
 import { prisma } from '@infra/db/prisma/prismaClient';
+import { UsersRepository } from '@infra/db/repositories/users.repository';
 
 export class PrismaUsersRepository implements UsersRepository {
   constructor() {}

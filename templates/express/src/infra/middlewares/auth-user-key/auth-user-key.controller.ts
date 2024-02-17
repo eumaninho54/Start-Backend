@@ -1,6 +1,8 @@
 import { NextFunction, Request, Response } from 'express';
-import { AuthUserKeyUseCase } from './auth-user-key.use-case';
+
 import { DomainError } from '@core/domain/errors/domain-error';
+
+import { AuthUserKeyUseCase } from './auth-user-key.use-case';
 
 export class AuthUserKeyController {
   constructor(private authUserKeyUseCase: AuthUserKeyUseCase) {}

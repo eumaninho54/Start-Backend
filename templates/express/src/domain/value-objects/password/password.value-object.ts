@@ -1,10 +1,11 @@
 import bcrypt from 'bcrypt';
 
+import { SALT_ROUNDS } from '@config/crypto';
+
 import { Either, left, right } from '@core/helpers/Either';
 
 import { DifferentPasswordsError } from '@domain/value-objects/password/errors/different-passwords-error';
 
-import { SALT_ROUNDS } from '@config/crypto';
 
 export class Password {
   protected constructor(private readonly password: string) {}
@@ -15,6 +16,7 @@ export class Password {
 
   static async createHash(password: string): Promise<Password> {
     const passwordHash = await bcrypt.hash(password, SALT_ROUNDS);
+
     return new Password(passwordHash);
   }
 
