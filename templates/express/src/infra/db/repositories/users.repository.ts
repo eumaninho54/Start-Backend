@@ -1,4 +1,5 @@
 import { AsyncMaybe } from '@core/helpers/Maybe';
+
 import { User } from '@domain/entities/user.entity';
 
 export abstract class UsersRepository {

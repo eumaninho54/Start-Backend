@@ -1,6 +1,8 @@
 import { Request, Response } from 'express';
-import { GetUserByCredentialsUseCase } from './get-user-by-credentials.use-case';
+
 import { DomainError } from '@core/domain/errors/domain-error';
+
+import { GetUserByCredentialsUseCase } from './get-user-by-credentials.use-case';
 
 export class GetUserByCredentialsController {
   constructor(
