@@ -1,7 +1,7 @@
 {
   "name": "start-backend",
   "description": "Pre-generator of a backend project",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "./bin/start-backend.ts",
   "license": "MIT",
   "author": "eumaninho54 <angelo.omarzinho@outlook.com> (https://github.com/eumaninho54)",
